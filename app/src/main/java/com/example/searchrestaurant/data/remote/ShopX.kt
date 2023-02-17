@@ -1,0 +1,80 @@
+package com.example.searchrestaurant.data.remote
+
+
+import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
+
+@JsonClass(generateAdapter = true)
+data class ShopX(
+    val access: String?,
+    val address: String?,
+    val band: String?,
+    @Json(name = "barrier_free")
+    val barrierFree: String?,
+    val budget: BudgetX?,
+    @Json(name = "budget_memo")
+    val budgetMemo: String?,
+    val capacity: Int?,
+    val card: String?,
+    val `catch`: String?,
+    val charter: String?,
+    val child: String?,
+    val close: String?,
+    @Json(name = "coupon_urls")
+    val couponUrls: CouponUrlsX?,
+    val course: String?,
+    val english: String?,
+    @Json(name = "free_drink")
+    val freeDrink: String?,
+    @Json(name = "free_food")
+    val freeFood: String?,
+    val genre: GenreX?,
+    val horigotatsu: String?,
+    val id: String?,
+    val karaoke: String?,
+    @Json(name = "ktai_coupon")
+    val ktaiCoupon: Int?,
+    @Json(name = "large_area")
+    val largeArea: LargeAreaX?,
+    @Json(name = "large_service_area")
+    val largeServiceArea: LargeServiceAreaX?,
+    val lat: Double?,
+    val lng: Double?,
+    @Json(name = "logo_image")
+    val logoImage: String?,
+    val lunch: String?,
+    @Json(name = "middle_area")
+    val middleArea: MiddleAreaX?,
+    val midnight: String?,
+    @Json(name = "mobile_access")
+    val mobileAccess: String?,
+    val name: String?,
+    @Json(name = "name_kana")
+    val nameKana: String?,
+    @Json(name = "non_smoking")
+    val nonSmoking: String?,
+    val `open`: String?,
+    @Json(name = "other_memo")
+    val otherMemo: String?,
+    val parking: String?,
+    @Json(name = "party_capacity")
+    val partyCapacity: Int?,
+    val pet: String?,
+    val photo: PhotoX?,
+    @Json(name = "private_room")
+    val privateRoom: String?,
+    @Json(name = "service_area")
+    val serviceArea: ServiceAreaX?,
+    @Json(name = "shop_detail_memo")
+    val shopDetailMemo: String?,
+    val show: String?,
+    @Json(name = "small_area")
+    val smallArea: SmallAreaX?,
+    @Json(name = "station_name")
+    val stationName: String?,
+    val tatami: String?,
+    val tv: String?,
+    val urls: UrlsX?,
+    val wedding: String?,
+    val wifi: String?
+)
