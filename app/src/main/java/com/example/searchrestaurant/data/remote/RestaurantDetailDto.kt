@@ -5,6 +5,7 @@ import com.example.searchrestaurant.domain.model.RestaurantDetail
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
+
 @JsonClass(generateAdapter = true)
 data class RestaurantDetailDto(
     val results: ResultsX?
@@ -12,6 +13,6 @@ data class RestaurantDetailDto(
 
 fun RestaurantDetailDto.toRestaurantDetail(): RestaurantDetail {
     return RestaurantDetail(
-        //name = results?.shop!!.name
+        shop = results?.shop.toString()
     )
 }

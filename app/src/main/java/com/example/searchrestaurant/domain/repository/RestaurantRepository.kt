@@ -6,12 +6,12 @@ import com.example.searchrestaurant.data.remote.SearchRestaurantResultDto
 interface RestaurantRepository {
 
     suspend fun searchRestaurant(
-        key: String,
+        //key: String,
         range: String,
         lat: String,
         lng: String,
         order: String,
-        format: String,
+        //format: String,
     ): SearchRestaurantResultDto
 
     suspend fun getRestaurantById(

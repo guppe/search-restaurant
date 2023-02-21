@@ -11,14 +11,14 @@ class RestaurantRepositoryImpl @Inject constructor(
 ): RestaurantRepository {
 
     override suspend fun searchRestaurant(
-        key: String,
+        //key: String,
         range: String,
         lat: String,
         lng: String,
         order: String,
-        format: String,
+        //format: String,
     ): SearchRestaurantResultDto {
-        return api.searchRestaurant(key, range, lat, lng, order, format)
+        return api.searchRestaurant(range, lat, lng, order)
     }
 
     override suspend fun getRestaurantById(

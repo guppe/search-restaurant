@@ -23,6 +23,12 @@ fun SearchRestaurantScreen(
 ) {
    val state = viewModel.state.value
 
+    LazyColumn(){
+        items(state.restaurants){ Restaurant ->
+            Text(text = Restaurant.name ?: "no")
+        }
+    }
+
     Box(modifier = Modifier.fillMaxSize()) {
         when {
             state.isLoading -> {
@@ -41,7 +47,7 @@ fun SearchRestaurantScreen(
                 state.restaurants?.let { restaurants ->
                     LazyColumn {
                         items(state.restaurants) { restaurant ->
-                            Text(text = restaurant.access.toString())
+                            Text(text = restaurant.name ?: "no")
                         }
                     }
                 }

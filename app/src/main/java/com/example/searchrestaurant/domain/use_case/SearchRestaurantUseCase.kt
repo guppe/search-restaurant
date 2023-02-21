@@ -12,16 +12,16 @@ class SearchRestaurantUseCase @Inject constructor(
     private val repository: RestaurantRepository
 ){
     operator fun invoke(
-        key: String,
+        //key: String,
         range: String,
         lat: String,
         lng: String,
         order: String,
-        format: String,
+        //format: String,
     ): Flow<NetworkResponse<List<Restaurant>>> = flow {
         try {
             emit(NetworkResponse.Loading<List<Restaurant>>())
-            val restaurants = repository.searchRestaurant(key, range, lat, lng, order, format).toRestaurant()
+            val restaurants = repository.searchRestaurant(range, lat, lng, order).toRestaurant()
             emit(NetworkResponse.Success<List<Restaurant>>(restaurants))
         } catch (e: Exception) {
             emit(NetworkResponse.Failure<List<Restaurant>>(e.message.toString()))

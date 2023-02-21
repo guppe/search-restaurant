@@ -21,18 +21,18 @@ class SearchRestaurantViewModel @Inject constructor(
     val state: State<SearchRestaurantState> = _state
 
     init {
-        searchRestaurant(Constents.API_KEY, "1", "34.67", "135.52", "4", "json")
+        searchRestaurant("1", "34.67", "135.52", "4")
     }
 
     fun searchRestaurant(
-        key: String,
+        //key: String,
         range: String,
         lat: String,
         lng: String,
         order: String,
-        format: String
+        //format: String
     ) {
-        searchRestaurantUseCase(key, range, lat, lng, order, format).onEach { result ->
+        searchRestaurantUseCase(range, lat, lng, order).onEach { result ->
             when (result) {
                 is NetworkResponse.Success -> {
                     _state.value = SearchRestaurantState(

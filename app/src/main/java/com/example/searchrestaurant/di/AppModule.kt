@@ -26,7 +26,7 @@ object AppModule {
             .addConverterFactory(
                 MoshiConverterFactory.create(
                     Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
-                )
+                ).asLenient()
             )
             .build()
             .create(HotPepperApi::class.java)

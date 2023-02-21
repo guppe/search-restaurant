@@ -14,8 +14,8 @@ fun SearchRestaurantResultDto.toRestaurant(): List<Restaurant> {
     return results?.shop!!.map {
         Restaurant(
             name = it?.name,
-            smallImageUrl = it!!.photo?.mobile?.s!!,
-            access = it.access
+            //smallImageUrl = it!!.photo?.mobile?.s!!,
+            //access = it.access
         )
     }
 }
